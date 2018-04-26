@@ -27,8 +27,8 @@ module.exports = function (app, AudienceModel) {
     app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
     app.get('/google/oauth/callback',
         passport.authenticate('google', {
-            successRedirect: '/project/index.html#/profile',
-            failureRedirect: '/project/index.html#/login'
+            successRedirect: '/index.html#/profile',
+            failureRedirect: '/index.html#/login'
         }));
 
     passport.use(new GoogleStrategy({
